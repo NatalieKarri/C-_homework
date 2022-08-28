@@ -3,27 +3,28 @@
 
 double[,] FillArray(int rows, int columns)
 {
-double[,] matrix = new double[rows, columns];
-for(int i = 0; i < matrix.GetLength(0); i++)
-{
-    for(int j = 0; j < matrix.GetLength(1); j++)
+    double[,] matrix = new double[rows, columns];
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        matrix[i,j] = new Random().Next(-10, 10) + new Random().NextDouble();
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = new Random().Next(-10, 10) + new Random().NextDouble();
+        }
     }
-}
-return matrix;
+    return matrix;
 }
 
-void PrintArray(double [,] matrix)
+void PrintArray(double[,] matrix)
 {
-   for(int i = 0; i < matrix.GetLength(0); i++)
-{
-    for(int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write($"{matrix[i,j]:f1}\t");
-    } 
-    Console.WriteLine();
-}
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]:f1}\t");
+        }
+        Console.WriteLine();
+    }
 }
 
 Console.Write("Введите количество строк: ");

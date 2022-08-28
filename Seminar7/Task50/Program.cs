@@ -13,19 +13,19 @@ int[,] FillArray(int rows, int columns)
     return matrix;
 }
 
-void PrintArray(int [,] matrix)
+void PrintArray(int[,] matrix)
 {
-   for(int i = 0; i < matrix.GetLength(0); i++)
-{
-    for(int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write($"{matrix[i,j]}\t");
-    } 
-    Console.WriteLine();
-}
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]}\t");
+        }
+        Console.WriteLine();
+    }
 }
 
-void FindElement(int [,] matrix, int row, int column)
+void FindElement(int[,] matrix, int row, int column)
 {
     if (row > matrix.GetLength(0) || column > matrix.GetLength(1))
     {
@@ -33,7 +33,7 @@ void FindElement(int [,] matrix, int row, int column)
     }
     else
     {
-        System.Console.WriteLine($"Значение элемента = {matrix[row-1, column-1]}");
+        System.Console.WriteLine($"Значение элемента = {matrix[row - 1, column - 1]}");
     }
 }
 
